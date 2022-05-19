@@ -12,7 +12,7 @@
     <!--   <a href="#/">Home</a> |
     <a href="#/AboutPage">About</a> |
     <a href="#/NotFound">Broken Link</a> -->
-    <component :is="currentView" />
+    
     <h1>{{ msg }}</h1>
     <h2>{{ title }}</h2>
     <child-tag v-on:changeTitle="updateTitle($event)" />
