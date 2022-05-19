@@ -1,5 +1,4 @@
-<template>
-  <div class="hello">
+<div class="hello">
     <p>
       <!-- use router-link component for navigation. -->
       <!-- specify the link by passing the `to` prop. -->
@@ -12,7 +11,6 @@
     <!--   <a href="#/">Home</a> |
     <a href="#/AboutPage">About</a> |
     <a href="#/NotFound">Broken Link</a> -->
-    <component :is="currentView" />
     <h1>{{ msg }}</h1>
     <h2>{{ title }}</h2>
     <child-tag v-on:changeTitle="updateTitle($event)" />
@@ -101,32 +99,11 @@
       </li>
     </ul>
   </div>
-</template>
 
 <script>
 import ChildTag from "./ChildTag.vue";
-import AboutPage from "./AboutPage.vue";
 import FormTag from "./FormTag.vue";
 import ListData from "./ListData.vue";
-import NotFound from "./NotFound.vue";
-import Router from "vue-router";
-import Vue from "vue";
-
-Vue.use(Router);
-
-const routes = [
-  { path: "/AboutPage", component: AboutPage },
-  { path: "/NotFound", component: NotFound },
-];
-
-const router = new Router({
-  mode: "history",
-  routes,
-});
-new Vue({
-  router,
-  render: (h) => h(App),
-}).$mount("#app");
 
 export default {
   components: {
