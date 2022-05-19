@@ -1,4 +1,5 @@
-<div class="hello">
+<template>
+  <div class="hello">
     <p>
       <!-- use router-link component for navigation. -->
       <!-- specify the link by passing the `to` prop. -->
@@ -99,6 +100,7 @@
       </li>
     </ul>
   </div>
+</template>
 
 <script>
 import ChildTag from "./ChildTag.vue";
